@@ -7,10 +7,16 @@ export default class App extends React.Component {
   render() {
     return (
       <View>
-        <View style={styles.firstView} />
+        <View style={styles.firstView}>
+          <View style={styles.lineFont}>
+            <Text style={styles.headline}>Login</Text>
+          </View>
+        </View>
         <View style={styles.tvscreenTop} />
-        <Text>{deviceHeight}</Text>
-        <Text>{deviceWidth}</Text>
+        <View>
+          <Text>{deviceHeight}</Text>
+          <Text>{deviceWidth}</Text>
+        </View>
       </View>
     );
   }
@@ -28,9 +34,17 @@ const styles = StyleSheet.create({
     height: 18,
     backgroundColor: 'white',
     position: 'absolute',
-    top: 550,
-    left: 190,
+    top: '100%',
+    left: '50%',
     borderRadius: 5,
     transform: [{scaleX: 60}, {scaleY: 40.5}],
   },
+  headline: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 40,
+    width: '50%',
+  },
+  lineFont: {marginTop: '25%', justifyContent: 'center', alignItems: 'center'},
 });
